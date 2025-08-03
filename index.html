@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFitnessPal - Transforme seu corpo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+ <header>
+    <div class="header-content">
+      <h1><i class="fas fa-dumbbell"></i> MyFitnessPal</h1>
+      <p>Transforme seu corpo, melhore sua vida</p>
+    </div>
+  </header>
+  <nav>
+    <a href="#inicio"><i class="fas fa-home"></i> Início</a>
+    <a href="#login"><i class="fas fa-sign-in-alt"></i> Login</a>
+    <a href="#treinos"><i class="fas fa-running"></i> Treinos</a>
+    <a href="#nutricao"><i class="fas fa-apple-alt"></i> Nutrição</a>
+    <a href="#loja"><i class="fas fa-shopping-bag"></i> Loja</a>
+    <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
+  </nav>
+
+  <div class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Bem-vindo ao MyFitnessPal</h1>
+      <p>Seu portal completo para um estilo de vida mais saudável</p>
+      <a href="#login" class="cta-button">Começar Agora</a>
+    </div>
+  </div>
+
+  <section class="section" id="login">
+    <h2><i class="fas fa-user-circle"></i> Acesse sua Conta</h2>
+    <p class="section-subtitle">Faça login para acessar seus planos personalizados</p>
+    
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <i class="fas fa-dumbbell"></i>
+          <h3>MyFitnessPal</h3>
+          <p>Entre com suas credenciais</p>
+        </div>
+        
+        <form class="login-form">
+          <div class="form-group">
+            <label for="email">
+              <i class="fas fa-envelope"></i>
+              Email
+            </label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">
+              <i class="fas fa-lock"></i>
+              Senha
+            </label>
+            <div class="password-input">
+              <input type="password" id="password" name="password" placeholder="Sua senha" required>
+              <button type="button" class="toggle-password" onclick="togglePassword()">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" name="remember">
+              <span class="checkmark"></span>
+              Lembrar de mim
+            </label>
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+          </div>
+          
+          <button type="submit" class="login-btn">
+            <i class="fas fa-sign-in-alt"></i>
+            Entrar
+          </button>
+        </form>
+        
+        <div class="login-divider">
+          <span>ou</span>
+        </div>
+        
+        <div class="social-login">
+          <button class="social-btn google">
+            <i class="fab fa-google"></i>
+            Continuar com Google
+          </button>
+          <button class="social-btn facebook">
+            <i class="fab fa-facebook-f"></i>
+            Continuar com Facebook
+          </button>
+        </div>
+        
+        <div class="login-footer">
+          <p>Não tem uma conta? <a href="#" class="signup-link">Cadastre-se aqui</a></p>
+        </div>
+      </div>
+      
+      <div class="login-benefits">
+        <h3>Por que fazer login?</h3>
+        <div class="benefit-item">
+          <i class="fas fa-chart-line"></i>
+          <div>
+            <h4>Acompanhe seu Progresso</h4>
+            <p>Monitore seus resultados e evolução</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-calendar-check"></i>
+          <div>
+            <h4>Planos Personalizados</h4>
+            <p>Treinos adaptados ao seu perfil</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-users"></i>
+          <div>
+            <h4>Comunidade Fitness</h4>
+            <p>Conecte-se com outros atletas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="treinos">
+    <h2><i class="fas fa-dumbbell"></i> Planos de Treino</h2>
+    <p class="section-subtitle">Escolha o plano ideal para seus objetivos</p>
+    
+    <div class="carousel-container">
+      <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/O treino com pesos livres é uma das modalidades….jpg" alt="Treino de força">
+              <div class="card-overlay">
+                <span class="difficulty">Iniciante</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Força e Hipertrofia</h3>
+              <p>Exercícios para ganho de massa muscular com foco em resultados duradouros.</p>
+              <div class="card-features">
+                <span><i class="fas fa-clock"></i> 45-60 min</span>
+                <span><i class="fas fa-calendar"></i> 4x semana</span>
+              </div>
+              <button class="card-btn">Ver Detalhes</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="img/cardio.jpg" alt="Cardio">
+              <div class="card-overlay">
+                <span class="difficulty">Intermediário</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Cardio & Emagrecimento</h3>
+              <p>Treinos intensos para queimar gordura e melhorar o condicionamento cardiovascular.</p>
+              <div class="card-features">
+                <span><i class="fas fa-clock"></i> 30-45 min</span>
+                <span><i class="fas fa-calendar"></i> 5x semana</span>
+              </div>
+              <button class="card-btn">Ver Detalhes</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="img/O treino com pesos livres é uma das modalidades….jpg" alt="Treino funcional">
+              <div class="card-overlay">
+                <span class="difficulty">Avançado</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Funcional & CrossFit</h3>
+              <p>Treinos dinâmicos que trabalham força, resistência e mobilidade de forma integrada.</p>
+              <div class="card-features">
+                <span><i class="fas fa-clock"></i> 60-75 min</span>
+                <span><i class="fas fa-calendar"></i> 3x semana</span>
+              </div>
+              <button class="card-btn">Ver Detalhes</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="img/cardio.jpg" alt="Yoga">
+              <div class="card-overlay">
+                <span class="difficulty">Todos</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Yoga & Flexibilidade</h3>
+              <p>Melhore sua flexibilidade, equilíbrio e bem-estar mental com práticas de yoga.</p>
+              <div class="card-features">
+                <span><i class="fas fa-clock"></i> 45-60 min</span>
+                <span><i class="fas fa-calendar"></i> 3x semana</span>
+              </div>
+              <button class="card-btn">Ver Detalhes</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="img/O treino com pesos livres é uma das modalidades….jpg" alt="Treino em casa">
+              <div class="card-overlay">
+                <span class="difficulty">Iniciante</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Treino em Casa</h3>
+              <p>Exercícios eficazes que você pode fazer no conforto da sua casa, sem equipamentos.</p>
+              <div class="card-features">
+                <span><i class="fas fa-clock"></i> 20-30 min</span>
+                <span><i class="fas fa-calendar"></i> 6x semana</span>
+              </div>
+              <button class="card-btn">Ver Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn next-btn" onclick="moveCarousel(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="carousel-dots">
+      <span class="dot active" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+      <span class="dot" onclick="goToSlide(3)"></span>
+      <span class="dot" onclick="goToSlide(4)"></span>
+    </div>
+  </section>
+
+  <section class="section" id="nutricao">
+    <h2><i class="fas fa-apple-alt"></i> Nutrição</h2>
+    <div class="nutrition-content">
+      <div class="nutrition-card">
+        <i class="fas fa-utensils"></i>
+        <h3>Alimentação Balanceada</h3>
+        <p>Dicas de alimentação saudável, receitas fitness e sugestões de suplementação para otimizar seus resultados.</p>
+      </div>
+      <div class="nutrition-card">
+        <i class="fas fa-calculator"></i>
+        <h3>Calculadora de Calorias</h3>
+        <p>Calcule suas necessidades calóricas e macro-nutrientes baseado em seus objetivos e nível de atividade.</p>
+      </div>
+      <div class="nutrition-card">
+        <i class="fas fa-book-open"></i>
+        <h3>Receitas Fitness</h3>
+        <p>Receitas deliciosas e nutritivas que vão te ajudar a manter uma alimentação saudável sem abrir mão do sabor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="loja">
+    <h2><i class="fas fa-shopping-bag"></i> Loja MyFitnessPal</h2>
+    <div class="store-content">
+      <div class="store-item">
+        <i class="fas fa-pills"></i>
+        <h3>Suplementos</h3>
+        <p>Proteínas, vitaminas e suplementos de qualidade para potencializar seus resultados.</p>
+      </div>
+      <div class="store-item">
+        <i class="fas fa-tshirt"></i>
+        <h3>Roupas Esportivas</h3>
+        <p>Roupas confortáveis e funcionais para seus treinos, com tecnologia de secagem rápida.</p>
+      </div>
+      <div class="store-item">
+        <i class="fas fa-dumbbell"></i>
+        <h3>Equipamentos</h3>
+        <p>Equipamentos de qualidade para montar sua academia em casa ou complementar seus treinos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <h2><i class="fas fa-envelope"></i> Fale Conosco</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <p>contato@myfitnesspal.com.br</p>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-instagram"></i>
+          <p>@myfitnesspal</p>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <p>(11) 99999-9999</p>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 MyFitnessPal. Todos os direitos reservados.</p>
+      <p>Transformando vidas através do fitness</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
